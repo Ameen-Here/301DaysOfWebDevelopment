@@ -1,0 +1,50 @@
+.first-part{
+  background-color: #CDF0EA;
+  padding-top: 50px;
+  padding-left: 40%;
+  margin-bottom: 0;
+}
+.second-part{
+  background-color: #CDF0EA;
+  margin-top: 0;
+  padding-top: 2%;
+  padding-left: 40%;
+}
+.third-part{
+  background-color: #CDF0EA;
+  margin-top: 0;
+  padding-left: 30%;
+  padding-bottom: 5%;
+}
+.self-taught{
+  padding-left: 40px;
+}
+body{
+  margin: 0;
+}
+h2{
+   margin: 0;
+}
+.mountain{
+  display: block;
+  padding: 0;
+}
+/* body {
+    background-color: #CDF0EA;
+} */
+/* hr {
+    border-color: grey;
+    border-style: none;
+    border-top-style: dotted;
+    border-width: 5px;
+    width: 5%;
+  }
+h1{
+  color:#262A53;
+}
+h3{
+  color: #464660;
+}
+h2{
+  color: #464660;
+} */
