@@ -1,0 +1,21 @@
+p {
+  border: 5px dashed green;
+  height: 200px;
+  width: 200px;
+  background-color: indianred;
+  border-left-style: solid;
+}
+
+/* Padding */
+h1 {
+  padding: 30px; /* there are also padding-left, padding-top, padding-bottom,etc;  */
+  border: 10px solid red;
+}
+
+/* Margin */
+h2 {
+  width: 200px;
+  width: 200px;
+  margin: 50px;
+  padding: 20px;
+}
