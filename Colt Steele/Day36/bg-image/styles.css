@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+
+section {
+  width: 80%;
+  height: 720px;
+  background-image: url("https://images.unsplash.com/photo-1643474195612-87b8cd04a962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  margin: auto;
+}
+
+h1 {
+  font-size: 80px;
+  color: rgb(164, 206, 240);
+  margin-top: 0;
+}
