@@ -1,0 +1,24 @@
+const heading = document.querySelector("#mainHeading");
+const colorBtn = document.querySelector("#colorBtn");
+const fullBody = document.querySelector("body");
+const form = document.querySelector("#formSubmission");
+
+const randomiseColor = function () {
+  const color1 = Math.floor(Math.random() * 267);
+  const color2 = Math.floor(Math.random() * 267);
+  const color3 = Math.floor(Math.random() * 267);
+
+  return `rgb(${color1}, ${color2}, ${color3})`;
+};
+
+const colorize = function () {
+  const value = randomiseColor();
+  fullBody.style.background = value;
+  heading.textContent = value;
+};
+colorBtn.addEventListener("click", colorize);
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log("Clicked");
+});
