@@ -2,16 +2,11 @@ const inputField = document.querySelector("input");
 const form1 = document.querySelector("#searchForm");
 const container = document.querySelector(".container");
 
-// search/shows?q=:query
 
-const makeImages = function (results) {
+const showResult = function (results) {
   for (let result of results.data) {
-    console.log(result);
 
     if (result.show.image) {
-      //   const img = document.createElement("IMG");
-      //   img.setAttribute("src", result.show.image.medium);
-      //   document.body.append(img);
       let rating = "";
       if (!result.show.rating.average) {
         rating = "Not available.";
@@ -31,13 +26,16 @@ const makeImages = function (results) {
     }
   }
 };
+
+
 form1.addEventListener("submit", async function (e) {
   e.preventDefault();
   const input = inputField.value;
-  const res = await axios.get(
-    ` https://api.tvmaze.com/search/shows?q=${input}`
-  );
-  makeImages(res);
+  const config = {
+    params: { q: input },
+  };
+  const res = await axios.get(` https://api.tvmaze.com/search/shows`, config);
+  showResult(res);
 
   inputField.value = "";
 });
