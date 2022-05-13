@@ -1,0 +1,11 @@
+<%- include ("../partials/head") %>
+<body>
+  <h1>Edit Comment</h1>
+
+  <form action="/comments/<%= foundComment.id %>?_method=PATCH " method="post">
+    <textarea name="editedComment" id="" cols="30" rows="10">
+    <%= foundComment.comment %> </textarea
+    >
+    <button type="submit">Click Me</button>
+  </form>
+</body>
