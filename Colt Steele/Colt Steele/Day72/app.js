@@ -43,13 +43,7 @@ app.get("/comments", (req, res) => {
   res.render("comments/index", { comments, title: "All Comments" });
 });
 
-// Show details of specific comment
 
-app.get("/comments/:id", (req, res) => {
-  const { id } = req.params;
-  const comment = comments.find((c) => c.id === id);
-  res.render("comments/show", { title: "Comments details", comment });
-});
 
 //  Add new comment and user and the form to accept the user and comment
 
@@ -61,6 +55,14 @@ app.post("/comments", (req, res) => {
   const { username, comment } = req.body;
   comments.push({ id: uuid(), username, comment });
   res.redirect("/comments"); // this will redirect to get /comments woth status code 302 something
+});
+
+// Show details of specific comment
+
+app.get("/comments/:id", (req, res) => {
+  const { id } = req.params;
+  const comment = comments.find((c) => c.id === id);
+  res.render("comments/show", { title: "Comments details", comment });
 });
 
 // Update with patch and form to accept the edited comment
