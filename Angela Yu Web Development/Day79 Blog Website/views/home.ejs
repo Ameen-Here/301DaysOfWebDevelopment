@@ -1,0 +1,14 @@
+<%- include ("partials/header.ejs") %> 
+    <h1 style="text-decoration: underline;">Home Page</h1>
+    <br> <br> <br>
+    <% for(let post of posts) { %>
+      <div>
+      <h2><%= post.title %> </h2>
+      <p><%= post.content.slice(0,300)%>... <a href="/posts/<%= post.title%>">read more.</a>  </p>
+      <br>
+    </div>
+    <% } %>  
+    <form action="/compose" method="get">
+    <button type="submit" class="btn btn-primary">Add new Blog</button>
+  </form>
+<%- include("partials/footer.ejs") %>
