@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create new products</title>
+  </head>
+  <body>
+    <h1>Create a new product for <%= farm.name %></h1>
+    <form action="/farms/<%= farm._id %>/products " method="post">
+      <input type="text" name="name" placeholder="Item Name" />
+      <input type="number" name="price" placeholder="Price of the item" />
+      <select name="category" id="category">
+        <option value="Fruits">Fruits</option>
+        <option value="Vegetables">Vegetables</option>
+        <option value="Diary">Diary</option>
+      </select>
+      <button type="submit">Add the product</button>
+    </form>
+
+    <a href="/farms/<%= farm._id %> "></a>
+  </body>
+</html>
