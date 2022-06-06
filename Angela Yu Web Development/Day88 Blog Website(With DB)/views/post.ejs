@@ -1,0 +1,11 @@
+<%- include ("partials/header.ejs") %> 
+<% if(!resPost){ %>
+    <h1>The Post is not found. Error:404</h1>
+<% } else { %>
+    <h1><%= resPost.title %> </h1> 
+    <br><br>
+    <p><%= resPost.content %> </p>  
+<% } %> 
+
+<a href="/" class="btn btn-success">Back to all blogs</a>
+<%- include("partials/footer.ejs") %>
